@@ -3,7 +3,7 @@
 <head>
     <title>My First Webpage</title>
     <style>
-       @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
         *{
           margin: 0;
           padding: 0;
@@ -21,9 +21,9 @@
           background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
         }
         .container{
-          max-width: 1000px;
+          max-width: 900px;
           background: #fff;
-          width: 1000px;
+          width: 900px;
           padding: 25px 40px 10px 40px;
           box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
@@ -37,7 +37,7 @@
           -webkit-text-fill-color: transparent;
         }
         .container form{
-          padding: 30px 0 0 0;
+          padding: 40px 0 0 0;
         }
         .container form .form-row{
           display: flex;
@@ -45,7 +45,7 @@
         }
         form .form-row .input-data{
           width: 100%;
-          height: 50px;
+          height: 40px;
           margin: 0 20px;
           position: relative;
         }
@@ -74,7 +74,7 @@
         .input-data label{
           position: absolute;
           pointer-events: none;
-          bottom: 5px;
+          bottom: 10px;
           font-size: 16px;
           transition: all 0.3s ease;
         }
@@ -133,7 +133,7 @@
           position: relative;
           z-index: 2;
         }
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
           .container .text{
             font-size: 30px;
           }
@@ -157,15 +157,21 @@
       <div class="text">
          Diagnostico de diabetes
       </div>
-      {% if predictions == 0 %}
-            <h1 style="color: green;">
+      <di>
+        {% if predictions == 0 %}
+            <h3 style="color: green;text-align: center">
               "No tienes diabetes"
-            </h1>
-      {% elif predictions == 2 %}
-            <h1 style="color: red;">
+            </h3>
+        {% elif predictions == 1 %}
+            <h3 style="color: blue;text-align: center">
               "Cuidado !! Tienes diabetes"
-            </h1>
-      {% endif %}
+            </h3>
+        {% elif predictions == 2 %}
+            <h3 style="color: red;text-align: center">
+              "Cuidado !! Tienes diabetes"
+            </h3>
+        {% endif %}
+      </di> 
       <form method="post" action="/predict">
         <div class="form-row">
             <div class="input-data">
@@ -180,6 +186,7 @@
                <small>(0 = Femenino, 1 = Masculino)</small>
             </div>
         </div>
+        <br />
         <div class="form-row">
             <div class="input-data">
               <input type="number" name= "PhysActivity" min="0" max="1" required>
@@ -194,6 +201,7 @@
               <small>(0 = No, 1 = Si)</small>
             </div>
         </div>
+        <br />
         <div class="form-row">
             <div class="input-data">
               <input type="number" name="Veggies" min="0" max="1" required>
@@ -208,6 +216,7 @@
               <small>(0 = No, 1 = Si)</small>
             </div>
         </div>
+        <br />
         <div class="form-row">
           <div class="input-data">
             <input type="number" name="Smoker" min="0" max="1" required>
@@ -222,6 +231,7 @@
             <small>(0 = No, 1 = Si)</small>
           </div>
         </div>
+        <br />
         <div class="form-row">
           <div class="input-data">
             <input type="number" name="HighChol" min="0" max="1" required>
@@ -235,6 +245,7 @@
             <label for="">Indice de masa corporal</label>
           </div>
         </div>
+        <br />
         <div class="form-row">
           <div class="input-data">
             <input type="number" name="GenHlth" min="1" max="5" required>
@@ -249,6 +260,7 @@
             <small>(Escala de 1 a 30 dias)</small>
           </div>
         </div>
+        <br />
         <div class="form-row">
           <div class="input-data">
             <input type="number" name="DiffWalk" min="0" max="1" required>
@@ -263,12 +275,13 @@
             <small>(0 = No, 1 = Si)</small>
           </div>
         </div>
-            <div class="form-row submit-btn">
-              <div class="input-data">
-                <div class="inner"></div>
-                <input type="submit" value="Diagnosticar">
-             </div>
-            </div>
+        <br />
+        <div class="form-row submit-btn">
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="Diagnosticar">
+         </div>
+        </div>
       </form>
       </div>
   </body>
