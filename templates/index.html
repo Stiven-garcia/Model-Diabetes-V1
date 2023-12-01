@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Webpage</title>
+    <title>Proyecto Final Analisis de Datos</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
         *{
@@ -160,15 +160,15 @@
       <di>
         {% if predictions == 0 %}
             <h3 style="color: green;text-align: center">
-              "No tienes diabetes"
+              "Según el modelo, no tienes diabetes. ¡Sigue cuidando tu salud!"
             </h3>
         {% elif predictions == 1 %}
             <h3 style="color: blue;text-align: center">
-              "Cuidado !! Tienes diabetes"
+              "Según el modelo, se detecta prediabetes. Consulta a un profesional de la salud"
             </h3>
         {% elif predictions == 2 %}
             <h3 style="color: red;text-align: center">
-              "Cuidado !! Tienes diabetes"
+              "¡Cuidado! Según el modelo, tienes diabetes. Consulta a un profesional de la salud lo más pronto posible"
             </h3>
         {% endif %}
       </di> 
@@ -191,13 +191,13 @@
             <div class="input-data">
               <input type="number" name= "PhysActivity" min="0" max="1" required>
               <div class="underline"></div>
-              <label for="">Actividad fisica en los ultimos 30 dias</label>
+              <label for="">¿Has participado en alguna actividad física en los últimos 30 días?</label>
               <small>(0 = No, 1 = Si)</small>
             </div>
             <div class="input-data">
               <input type="number" name="Fruits" min="0" max="1" required>
               <div class="underline"></div>
-              <label for="">¿Consume frutas a diario?</label>
+              <label for="">¿Incorpora frutas en su dieta diaria?</label>
               <small>(0 = No, 1 = Si)</small>
             </div>
         </div>
@@ -206,13 +206,13 @@
             <div class="input-data">
               <input type="number" name="Veggies" min="0" max="1" required>
               <div class="underline"></div>
-              <label for="">¿Consume vegetales a diario?</label>
+              <label for="">¿Incorpora vegetales en su dieta diaria?</label>
               <small>(0 = No, 1 = Si)</small>
             </div>
             <div class="input-data">
               <input type="number" name="HvyAlcoholConsump" min="0" max="1" required>
               <div class="underline"></div>   
-              <label for="">¿Consume mas de 14 bebidas alcolicas a la semana?</label>
+              <label for="">¿Excede el consumo de 14 bebidas alcohólicas por semana?</label>
               <small>(0 = No, 1 = Si)</small>
             </div>
         </div>
@@ -221,13 +221,13 @@
           <div class="input-data">
             <input type="number" name="Smoker" min="0" max="1" required>
             <div class="underline"></div>
-            <label for="">¿Has fumado mas de 100 cigarrillos?</label>
+            <label for="">¿Has fumado más de 100 cigarrillos en tu vida?</label>
             <small>(0 = No, 1 = Si)</small>
           </div>
           <div class="input-data">
             <input type="number" name="HighBP" min="0" max="1" required>
             <div class="underline"></div>
-            <label for="">¿Tiene hipertension arterial?</label>
+            <label for="">¿Padece de hipertensión arterial?</label>
             <small>(0 = No, 1 = Si)</small>
           </div>
         </div>
@@ -236,7 +236,7 @@
           <div class="input-data">
             <input type="number" name="HighChol" min="0" max="1" required>
             <div class="underline"></div>
-            <label for="">¿Tiene el colesterol alto?</label>
+            <label for="">¿Presenta niveles elevados de colesterol?</label>
             <small>(0 = No, 1 = Si)</small>
           </div>
           <div class="input-data">
@@ -256,7 +256,7 @@
           <div class="input-data">
             <input type="number" name="PhysHlth" min="1" max="30" required>
             <div class="underline"></div>
-            <label for="">¿Cuantos dias durante los ultimos 30 dias su salud fisica no fue buena?</label>
+            <label for="">¿Cuántos días en los últimos 30 tuvo problemas con su salud física?</label>
             <small>(Escala de 1 a 30 dias)</small>
           </div>
         </div>
@@ -265,13 +265,13 @@
           <div class="input-data">
             <input type="number" name="DiffWalk" min="0" max="1" required>
             <div class="underline"></div>
-            <label for="">¿Tienes dificultades para caminar o subir escaleras?</label>
+            <label for="">¿Experimenta dificultades al caminar o al subir escaleras?</label>
             <small>(0 = No, 1 = Si)</small>
           </div>
           <div class="input-data">
             <input type="number" name="HeartDiseaseorAttack" min="0" max="1" required>
             <div class="underline"></div>
-            <label for="">¿Ha presentado enfermedad coronario (SHD o infarto de miocardio (IM))?</label>
+            <label for="">¿Ha tenido alguna vez enfermedad coronaria (EC) o un infarto de miocardio (IM)?</label>
             <small>(0 = No, 1 = Si)</small>
           </div>
         </div>
